@@ -639,7 +639,7 @@ footer{background:linear-gradient(160deg,#d4c3d5 0%,#b2cad4 35%,#d2d9df 65%,#f6e
 .footer-credit a:hover{color:var(--gold);opacity:1}
 
 /* ============ ENVELOPE ============ */
-#envelope-screen{position:fixed;inset:0;z-index:9998;background:#b9c9d4;display:flex;align-items:center;justify-content:center;cursor:pointer;overflow:hidden;}
+#envelope-screen{position:fixed;inset:0;z-index:9998;background:#ece3d5;display:flex;align-items:center;justify-content:center;cursor:pointer;overflow:hidden;}
 #env-cover,#env-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;display:block;}
 #env-cover{z-index:1;opacity:0;transition:opacity .6s ease;}
 #env-cover.is-loaded{opacity:1;}
@@ -673,7 +673,7 @@ footer{background:linear-gradient(160deg,#d4c3d5 0%,#b2cad4 35%,#d2d9df 65%,#f6e
 
 <!-- ENVELOPE OPENING -->
 <div id="envelope-screen" role="button" aria-label="Toca para abrir la invitación" tabindex="0">
-  <img id="env-cover" src="./envelope-cover.jpg" alt="Sobre con sello N V" fetchpriority="high">
+  <img id="env-cover" src="./envelope-cover.png" alt="Sobre con sello N V" fetchpriority="high">
   <video id="env-video" src="./envelope-open.mp4" muted playsinline preload="auto" aria-hidden="true"></video>
   <div id="env-hint">Toca para abrir</div>
 </div>
