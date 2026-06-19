@@ -771,7 +771,24 @@ footer{background:linear-gradient(160deg,#d4c3d5 0%,#b2cad4 35%,#d2d9df 65%,#f6e
     </div>
   </section>
 
-  <div class="seam" style="--from:var(--paper);--to:var(--surface)" aria-hidden="true"></div>
+  <div class="seam" style="--from:var(--paper);--to:var(--bg)" aria-hidden="true"></div>
+
+  <!-- COUNTDOWN -->
+  <section class="section-bg countdown">
+    <div class="container">
+      <div class="eyebrow">Cuenta regresiva</div>
+      <h2>Contamos <em>los</em> días</h2>
+      <div class="countdown-sub">hasta el gran momento</div>
+      <div class="countdown-grid" id="cd">
+        <div class="cd-block"><div class="cd-num" id="cd-d">000</div><div class="cd-lbl">Días</div></div>
+        <div class="cd-block"><div class="cd-num" id="cd-h">00</div><div class="cd-lbl">Horas</div></div>
+        <div class="cd-block"><div class="cd-num" id="cd-m">00</div><div class="cd-lbl">Minutos</div></div>
+        <div class="cd-block"><div class="cd-num" id="cd-s">00</div><div class="cd-lbl">Segundos</div></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="seam" style="--from:var(--bg);--to:var(--surface)" aria-hidden="true"></div>
 
   <!-- FAMILIA -->
   <section class="section-surface familia">
@@ -788,44 +805,7 @@ footer{background:linear-gradient(160deg,#d4c3d5 0%,#b2cad4 35%,#d2d9df 65%,#f6e
     </div>
   </section>
 
-  <div class="seam" style="--from:var(--surface);--to:var(--paper)" aria-hidden="true"></div>
-
-  <!-- PADRINOS -->
-  <section class="section-paper padrinos">
-    <div class="container">
-      <div class="eyebrow">Quienes me acompañan</div>
-      <h2>Mis <em>padrinos</em></h2>
-      <div class="padrinos-grid">
-        <div class="padrino-card">
-          <div class="padrino-icon">
-            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 2a3 3 0 0 0-3 3c0 1.1.6 2.1 1.5 2.6"/>
-              <path d="M12 2a3 3 0 0 1 3 3c0 1.1-.6 2.1-1.5 2.6"/>
-              <path d="M9 8.6C6.7 9.4 5 11.5 5 14v2h14v-2c0-2.5-1.7-4.6-4-5.4"/>
-              <path d="M12 2v6"/>
-              <path d="M9 22l3-4 3 4"/>
-            </svg>
-          </div>
-          <div class="padrino-tipo">Madrina</div>
-          <div class="padrino-names">Por confirmar</div>
-        </div>
-        <div class="padrino-card">
-          <div class="padrino-icon">
-            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-              <circle cx="9" cy="7" r="4"/>
-              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-            </svg>
-          </div>
-          <div class="padrino-tipo">Padrino</div>
-          <div class="padrino-names">Por confirmar</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="seam" style="--from:var(--paper);--to:var(--surface)" aria-hidden="true"></div>
+  <div class="seam" style="--from:var(--surface);--to:var(--surface)" aria-hidden="true"></div>
 
   <!-- UBICACIONES -->
   <section class="section-surface locs">
@@ -873,22 +853,7 @@ footer{background:linear-gradient(160deg,#d4c3d5 0%,#b2cad4 35%,#d2d9df 65%,#f6e
     </div>
   </section>
 
-  <div class="seam" style="--from:var(--surface);--to:var(--bg)" aria-hidden="true"></div>
-
-  <!-- COUNTDOWN -->
-  <section class="section-bg countdown">
-    <div class="container">
-      <div class="eyebrow">Cuenta regresiva</div>
-      <h2>Contamos <em>los</em> días</h2>
-      <div class="countdown-sub">hasta el gran momento</div>
-      <div class="countdown-grid" id="cd">
-        <div class="cd-block"><div class="cd-num" id="cd-d">000</div><div class="cd-lbl">Días</div></div>
-        <div class="cd-block"><div class="cd-num" id="cd-h">00</div><div class="cd-lbl">Horas</div></div>
-        <div class="cd-block"><div class="cd-num" id="cd-m">00</div><div class="cd-lbl">Minutos</div></div>
-        <div class="cd-block"><div class="cd-num" id="cd-s">00</div><div class="cd-lbl">Segundos</div></div>
-      </div>
-    </div>
-  </section>
+  <div class="seam" style="--from:var(--surface);--to:var(--surface)" aria-hidden="true"></div>
 
   <!-- ITINERARIO -->
   <section id="siti" style="padding:min(10vh,90px) 0 min(12vh,110px)">
@@ -902,10 +867,10 @@ footer{background:linear-gradient(160deg,#d4c3d5 0%,#b2cad4 35%,#d2d9df 65%,#f6e
         <div class="iz-line" aria-hidden="true"></div>
         <div class="iz-glow" id="izGlow" aria-hidden="true"></div>
 
-        <!-- 6:00 PM Recepción -->
+        <!-- 5:00 PM Recepción -->
         <div class="iz-row">
           <div class="iz-side iz-side--left">
-            <div class="iz-time">6:00 PM</div>
+            <div class="iz-time">5:00 PM</div>
             <div class="iz-title">Recepción</div>
             <div class="iz-desc">Te doy la bienvenida a mi celebración.</div>
           </div>
@@ -920,31 +885,33 @@ footer{background:linear-gradient(160deg,#d4c3d5 0%,#b2cad4 35%,#d2d9df 65%,#f6e
           <div class="iz-side iz-side--right iz-side--empty"></div>
         </div>
 
-        <!-- 7:00 PM Cena -->
+        <!-- 5:30 PM Ceremonia -->
         <div class="iz-row">
           <div class="iz-side iz-side--left iz-side--empty"></div>
           <div class="iz-icon" aria-hidden="true">
             <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="24" cy="24" r="14"/>
-              <circle cx="24" cy="24" r="9" opacity=".55"/>
-              <path d="M14 7 L14 21 M11 7 L11 14 M17 7 L17 14"/>
-              <path d="M14 21 L14 41"/>
-              <path d="M36 7 C 33 8 31 13 31 18 C 31 20 32 21 34 21 L34 41 L36 41 L36 7 Z"/>
+              <path d="M24 4 L24 14"/>
+              <path d="M20 8 L28 8"/>
+              <path d="M12 22 L24 14 L36 22"/>
+              <path d="M14 22 L14 42 L34 42 L34 22"/>
+              <path d="M14 42 L34 42"/>
+              <rect x="21" y="28" width="6" height="14"/>
+              <path d="M24 30 L24 36"/>
             </svg>
           </div>
           <div class="iz-side iz-side--right">
-            <div class="iz-time">7:00 PM</div>
-            <div class="iz-title">Cena</div>
-            <div class="iz-desc">Disfrutemos juntos de una cena especial.</div>
+            <div class="iz-time">5:30 PM</div>
+            <div class="iz-title">Ceremonia</div>
+            <div class="iz-desc">Acompáñame en este momento tan especial.</div>
           </div>
         </div>
 
-        <!-- 8:00 PM Vals -->
+        <!-- 6:00 PM Vals -->
         <div class="iz-row">
           <div class="iz-side iz-side--left">
-            <div class="iz-time">8:00 PM</div>
+            <div class="iz-time">6:00 PM</div>
             <div class="iz-title">Vals</div>
-            <div class="iz-desc">El momento más esperado de la noche.</div>
+            <div class="iz-desc">El baile más esperado de la noche.</div>
           </div>
           <div class="iz-icon" aria-hidden="true">
             <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
@@ -957,7 +924,7 @@ footer{background:linear-gradient(160deg,#d4c3d5 0%,#b2cad4 35%,#d2d9df 65%,#f6e
           <div class="iz-side iz-side--right iz-side--empty"></div>
         </div>
 
-        <!-- 8:30 PM Brindis -->
+        <!-- 6:30 PM Brindis -->
         <div class="iz-row">
           <div class="iz-side iz-side--left iz-side--empty"></div>
           <div class="iz-icon" aria-hidden="true">
@@ -971,19 +938,34 @@ footer{background:linear-gradient(160deg,#d4c3d5 0%,#b2cad4 35%,#d2d9df 65%,#f6e
             </svg>
           </div>
           <div class="iz-side iz-side--right">
-            <div class="iz-time">8:30 PM</div>
+            <div class="iz-time">6:30 PM</div>
             <div class="iz-title">Brindis</div>
             <div class="iz-desc">Brindemos por mis quince años.</div>
           </div>
         </div>
 
-        <!-- 9:00 PM A bailar -->
+        <!-- 7:00 PM Cena -->
         <div class="iz-row">
           <div class="iz-side iz-side--left">
-            <div class="iz-time">9:00 PM</div>
-            <div class="iz-title">A bailar</div>
-            <div class="iz-desc">La pista no se detiene hasta el final.</div>
+            <div class="iz-time">7:00 PM</div>
+            <div class="iz-title">Cena</div>
+            <div class="iz-desc">Disfrutemos juntos de una cena especial.</div>
           </div>
+          <div class="iz-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="24" cy="24" r="14"/>
+              <circle cx="24" cy="24" r="9" opacity=".55"/>
+              <path d="M14 7 L14 21 M11 7 L11 14 M17 7 L17 14"/>
+              <path d="M14 21 L14 41"/>
+              <path d="M36 7 C 33 8 31 13 31 18 C 31 20 32 21 34 21 L34 41 L36 41 L36 7 Z"/>
+            </svg>
+          </div>
+          <div class="iz-side iz-side--right iz-side--empty"></div>
+        </div>
+
+        <!-- 8:00 PM A bailar -->
+        <div class="iz-row">
+          <div class="iz-side iz-side--left iz-side--empty"></div>
           <div class="iz-icon" aria-hidden="true">
             <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
               <path d="M16 30 L16 12 L34 8 L34 26"/>
@@ -992,12 +974,20 @@ footer{background:linear-gradient(160deg,#d4c3d5 0%,#b2cad4 35%,#d2d9df 65%,#f6e
               <path d="M16 18 L34 14"/>
             </svg>
           </div>
-          <div class="iz-side iz-side--right iz-side--empty"></div>
+          <div class="iz-side iz-side--right">
+            <div class="iz-time">8:00 PM</div>
+            <div class="iz-title">A bailar</div>
+            <div class="iz-desc">La pista no se detiene hasta el final.</div>
+          </div>
         </div>
 
-        <!-- 1:00 AM Fin -->
+        <!-- 12:00 AM Fin -->
         <div class="iz-row">
-          <div class="iz-side iz-side--left iz-side--empty"></div>
+          <div class="iz-side iz-side--left">
+            <div class="iz-time">12:00 AM</div>
+            <div class="iz-title">Fin de la fiesta</div>
+            <div class="iz-desc">Gracias por acompañarme. ¡Hasta pronto!</div>
+          </div>
           <div class="iz-icon" aria-hidden="true">
             <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
               <path d="M34 28 A 14 14 0 1 1 20 14 A 11 11 0 0 0 34 28 Z"/>
@@ -1007,11 +997,7 @@ footer{background:linear-gradient(160deg,#d4c3d5 0%,#b2cad4 35%,#d2d9df 65%,#f6e
               <circle cx="9" cy="24" r="1" fill="currentColor"/>
             </svg>
           </div>
-          <div class="iz-side iz-side--right">
-            <div class="iz-time">1:00 AM</div>
-            <div class="iz-title">Fin de la fiesta</div>
-            <div class="iz-desc">Gracias por acompañarme. ¡Hasta pronto!</div>
-          </div>
+          <div class="iz-side iz-side--right iz-side--empty"></div>
         </div>
       </div>
     </div>
@@ -1154,12 +1140,13 @@ footer{background:linear-gradient(160deg,#d4c3d5 0%,#b2cad4 35%,#d2d9df 65%,#f6e
       <div class="dress-avoid">
         <div class="swatch-group-title">Colores a evitar</div>
         <div class="avoid-list">
-          <div class="avoid-item"><span class="avoid-c" style="background:#ae90f0"></span>Lavanda</div>
+          <div class="avoid-item"><span class="avoid-c" style="background:#ae90f0"></span>Lila</div>
           <div class="avoid-item"><span class="avoid-c" style="background:#691ed9"></span>Morado</div>
           <div class="avoid-item"><span class="avoid-c" style="background:#9168bd"></span>Púrpura</div>
           <div class="avoid-item"><span class="avoid-c" style="background:#5dbaa8"></span>Aqua</div>
+          <div class="avoid-item"><span class="avoid-c" style="background:#c0392b"></span>Rojo</div>
         </div>
-        <div class="avoid-note">Estos tonos están reservados para la quinceañera</div>
+        <div class="avoid-note">El lila está reservado para la quinceañera</div>
       </div>
 
     </div>
