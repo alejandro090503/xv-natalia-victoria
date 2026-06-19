@@ -18,7 +18,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&family=Pinyon+Script&family=Italiana&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Great+Vibes&family=Jost:wght@400;500;600;700&family=Lora:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Marcellus&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <style>
@@ -39,11 +39,11 @@
   --ink-soft:#7a5b6e;
   --hair:color-mix(in srgb, var(--accent-deep) 14%, transparent);
   --hair-gold:color-mix(in srgb, var(--gold) 30%, transparent);
-  --display:'Cormorant Garamond',Georgia,serif;
-  --serif:'Cormorant Garamond',Georgia,serif;
-  --script:'Pinyon Script',cursive;
-  --italiana:'Italiana',serif;
-  --sans:'Montserrat',system-ui,sans-serif;
+  --display:'Fraunces',Georgia,serif;
+  --serif:'Lora',Georgia,serif;
+  --script:'Great Vibes',cursive;
+  --italiana:'Marcellus',serif;
+  --sans:'Jost',system-ui,sans-serif;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;background:var(--surface)}
@@ -336,7 +336,7 @@ h1 em,h2 em,h3 em{font-style:italic;font-weight:600;color:var(--gold)}
 .countdown-grid{display:flex;justify-content:center;gap:clamp(14px,3vw,36px);flex-wrap:wrap;font-variant-numeric:tabular-nums;perspective:1200px}
 .cd-block{min-width:110px;padding:32px 24px 28px;background:rgba(255,255,255,.86);border:1px solid rgba(201,160,68,.32);box-shadow:0 2px 8px rgba(122,91,110,.06),0 12px 36px -10px rgba(122,91,110,.12),inset 0 1px 0 rgba(255,255,255,.95);position:relative;overflow:hidden;border-radius:8px;backdrop-filter:blur(8px);}
 .cd-block::before{content:"";position:absolute;top:50%;left:12%;right:12%;height:1px;background:linear-gradient(to right,transparent,rgba(201,160,68,.4),rgba(201,160,68,.65),rgba(201,160,68,.4),transparent);}
-.cd-num{font-family:'Playfair Display',Georgia,serif;font-style:italic;font-weight:500;font-size:clamp(52px,8vw,80px);background:linear-gradient(160deg,#8a6120 0%,#c9a044 45%,#8a6120 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;display:block;transform-origin:center;letter-spacing:-1px;}
+.cd-num{font-family:'Fraunces',Georgia,serif;font-style:italic;font-weight:500;font-size:clamp(52px,8vw,80px);background:linear-gradient(160deg,#8a6120 0%,#c9a044 45%,#8a6120 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;display:block;transform-origin:center;letter-spacing:-1px;}
 .cd-lbl{font-family:var(--italiana);font-size:11px;letter-spacing:.5em;text-transform:uppercase;color:var(--gold-deep);margin-top:16px;padding-left:.5em;font-weight:500;opacity:.95}
 
 /* ============ ITINERARIO ZIGZAG ============ */
@@ -370,7 +370,7 @@ h1 em,h2 em,h3 em{font-style:italic;font-weight:600;color:var(--gold)}
 .iz-side--empty{visibility:hidden;}
 
 .iz-time{
-  font-family:'Playfair Display',Georgia,serif;font-style:italic;font-weight:600;
+  font-family:'Fraunces',Georgia,serif;font-style:italic;font-weight:600;
   font-size:clamp(28px,4.8vw,44px);
   background:linear-gradient(135deg,#8a6120 0%,#c9a044 45%,#8a6120 100%);
   -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
@@ -378,12 +378,12 @@ h1 em,h2 em,h3 em{font-style:italic;font-weight:600;color:var(--gold)}
   filter:drop-shadow(0 0 6px rgba(201,160,68,.25));
 }
 .iz-title{
-  font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;
+  font-family:'Lora',serif;font-style:italic;font-weight:600;
   font-size:clamp(20px,2.6vw,28px);
   color:var(--accent-deep);line-height:1.2;margin-bottom:8px;letter-spacing:.5px;
 }
 .iz-desc{
-  font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;
+  font-family:'Lora',serif;font-style:italic;font-weight:500;
   font-size:clamp(14px,1.6vw,16px);
   color:var(--ink-soft);line-height:1.5;letter-spacing:.1px;
   max-width:280px;display:inline-block;
