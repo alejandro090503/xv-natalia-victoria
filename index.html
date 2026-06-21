@@ -100,16 +100,26 @@ h1 em,h2 em,h3 em{font-style:italic;font-weight:600;color:var(--gold)}
   position:relative;min-height:100vh;min-height:100svh;
   display:flex;align-items:center;justify-content:center;
   overflow:hidden;isolation:isolate;contain:layout paint;
-  background:
-    url('./date-bg.jpg') center/cover no-repeat,
-    linear-gradient(160deg,#cdbedf 0%,#d4c3d5 50%,#b2cad4 100%);
+  background:linear-gradient(160deg,#cdbedf 0%,#d4c3d5 50%,#b2cad4 100%);
 }
 .hero::after{
   content:"";position:absolute;left:0;right:0;bottom:0;height:160px;z-index:0;pointer-events:none;
   background:linear-gradient(to bottom,transparent 0%,color-mix(in srgb,var(--surface) 60%,transparent) 60%,var(--surface) 100%);
 }
-/* hero-bg-wrap, hero-bg y hero-bg-overlay eliminados: viñeta oscura quitada por petición del cliente */
-/* hero-frame eliminado: la viñeta dorada se quitó por petición del cliente */
+/* ---- HERO VIDEO (estilo boda-paulina-leonardo: full-bleed + loop) ---- */
+.hero-media{position:absolute;inset:-8% -4%;z-index:-3;will-change:transform;}
+.hero-video{
+  position:absolute;inset:0;width:100%;height:100%;
+  object-fit:cover;object-position:center;
+  transform:scale(1.1);
+  filter:contrast(1.05) brightness(.58);
+}
+.hero-scrim{
+  position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:
+    radial-gradient(ellipse at center, rgba(32,24,38,.30) 0%, rgba(32,24,38,.52) 80%),
+    linear-gradient(180deg, rgba(32,24,38,.55) 0%, rgba(32,24,38,.30) 32%, rgba(32,24,38,.32) 60%, rgba(32,24,38,.72) 100%);
+}
 
 /* ============ DIVIDER ENVELOPE ============ */
 .divider-env{
@@ -182,6 +192,18 @@ h1 em,h2 em,h3 em{font-style:italic;font-weight:600;color:var(--gold)}
 }
 .hero-scroll::after{content:"";width:1px;height:40px;background:linear-gradient(to bottom, var(--gold), transparent);animation:scrollLine 2.4s ease-in-out infinite;}
 @keyframes scrollLine{0%,100%{transform:scaleY(.3);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}}
+
+/* Texto del hero en claro sobre el video */
+.hero-content{color:#f7f2ea;}
+.hero-eyebrow{color:#f1dca2;}
+.hero-eyebrow::before,.hero-eyebrow::after{background:#e6c878;}
+.hero-name{color:#fbf7f0;text-shadow:0 2px 30px rgba(18,12,22,.62),0 1px 6px rgba(18,12,22,.55);}
+.hero-and{color:#f3e7c6;text-shadow:0 2px 24px rgba(18,12,22,.58);}
+.hero-date{color:#f4efe7;text-shadow:0 1px 16px rgba(18,12,22,.62);}
+.hero-date .sep{color:#f1dca2;}
+.hero-place{color:#ece4d8;text-shadow:0 1px 14px rgba(18,12,22,.62);}
+.hero-scroll{color:#ece4d8;}
+.hero-scroll::after{background:linear-gradient(to bottom,#f1dca2,transparent);}
 
 /* ============ SEAMS ============ */
 .seam{height:72px;background:linear-gradient(to bottom,var(--from,var(--bg)) 0%,color-mix(in srgb, var(--from,var(--bg)) 50%, var(--to,var(--surface)) 50%) 50%,var(--to,var(--surface)) 100%);pointer-events:none;}
@@ -707,6 +729,12 @@ footer{background:linear-gradient(160deg,#d4c3d5 0%,#b2cad4 35%,#d2d9df 65%,#f6e
 
   <!-- HERO -->
   <section class="hero">
+    <div class="hero-media">
+      <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="./hero-poster.jpg" aria-hidden="true">
+        <source src="./hero.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="hero-scrim" aria-hidden="true"></div>
     <div class="hero-content">
       <svg class="hero-ornament-top" viewBox="0 0 200 40" fill="none" aria-hidden="true">
         <g stroke="var(--gold)" stroke-width=".9" fill="none" opacity=".9">
@@ -1448,6 +1476,9 @@ function launchInvitation(){
 
 // ------ HERO PARALLAX ------
 gsap.to('.hero-content',{yPercent:-8,ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:true}});
+gsap.to('.hero-media',{yPercent:14,ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:true}});
+// asegurar reproducción del video del hero (loop al terminar via atributo loop)
+(function(){var hv=document.querySelector('.hero-video');if(!hv)return;var p=hv.play();if(p&&p.catch)p.catch(function(){});})();
 
 // ------ VERSO ------
 if(document.querySelector('.verse-text')){
